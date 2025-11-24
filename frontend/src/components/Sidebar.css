@@ -1,7 +1,7 @@
 .sidebar {
   width: 280px;
   height: 100vh;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border-right: 1px solid var(--border-primary);
   display: flex;
   flex-direction: column;
@@ -11,25 +11,23 @@
 .sidebar-header {
   padding: 24px 20px;
   border-bottom: 1px solid var(--border-primary);
-  background: var(--bg-tertiary);
+  background: var(--bg-primary);
 }
 
 .sidebar-header h1 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .new-conversation-btn {
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 16px;
   background: var(--accent-primary);
   color: white;
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: 500;
   font-size: 14px;
   transition: all 0.2s ease;
@@ -37,16 +35,16 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-shadow: var(--shadow-sm);
 }
 
 .new-conversation-btn:hover {
   background: var(--accent-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px var(--accent-light);
+  box-shadow: var(--shadow-md);
 }
 
 .new-conversation-btn:active {
-  transform: translateY(0);
+  transform: scale(0.98);
 }
 
 .conversation-list {
@@ -64,21 +62,24 @@
 
 .conversation-item {
   padding: 12px 16px;
-  margin-bottom: 4px;
-  border-radius: 8px;
+  margin-bottom: 6px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   border: 1px solid transparent;
+  background: var(--bg-primary);
 }
 
 .conversation-item:hover {
-  background: var(--bg-hover);
-  border-color: var(--border-primary);
+  background: var(--bg-secondary);
+  border-color: var(--border-secondary);
+  box-shadow: var(--shadow-sm);
 }
 
 .conversation-item.active {
   background: var(--accent-light);
   border-color: var(--accent-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .conversation-title {

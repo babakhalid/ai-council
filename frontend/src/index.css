@@ -1,27 +1,28 @@
 :root {
-  /* Modern dark theme color palette */
-  --bg-primary: #0a0a0b;
-  --bg-secondary: #111113;
-  --bg-tertiary: #1a1a1d;
-  --bg-hover: #222225;
+  /* Modern light theme color palette */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f1f3f5;
+  --bg-hover: #e9ecef;
 
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a8;
-  --text-tertiary: #6b6b75;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
 
-  --border-primary: #2a2a2f;
-  --border-secondary: #1f1f24;
+  --border-primary: #e5e7eb;
+  --border-secondary: #d1d5db;
 
-  --accent-primary: #6366f1;
-  --accent-hover: #4f46e5;
-  --accent-light: rgba(99, 102, 241, 0.1);
+  --accent-primary: #000000;
+  --accent-hover: #1a1a1a;
+  --accent-light: rgba(0, 0, 0, 0.04);
 
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
 
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -29,7 +30,7 @@
   line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: dark;
+  color-scheme: light;
   color: var(--text-primary);
   background-color: var(--bg-primary);
 
@@ -89,16 +90,16 @@ textarea:focus {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-primary);
+  background: var(--border-secondary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-hover);
+  background: var(--text-tertiary);
 }
 
 /* Global markdown styling */
@@ -154,13 +155,14 @@ textarea:focus {
   border-radius: 4px;
   font-family: 'Fira Code', 'Courier New', monospace;
   font-size: 0.9em;
-  color: var(--accent-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
 }
 
 .markdown-content pre {
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow-x: auto;
   margin-bottom: 16px;
   border: 1px solid var(--border-primary);
@@ -170,23 +172,28 @@ textarea:focus {
   background: none;
   padding: 0;
   color: var(--text-primary);
+  border: none;
 }
 
 .markdown-content blockquote {
-  border-left: 3px solid var(--accent-primary);
+  border-left: 3px solid var(--text-secondary);
   padding-left: 16px;
   margin: 16px 0;
   color: var(--text-secondary);
   font-style: italic;
+  background: var(--bg-secondary);
+  padding: 12px 16px;
+  border-radius: 4px;
 }
 
 .markdown-content a {
   color: var(--accent-primary);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .markdown-content a:hover {
-  text-decoration: underline;
+  color: var(--text-primary);
 }
 
 .markdown-content strong {
